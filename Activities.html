@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ACTIVITIES - PORTFOLIO</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: linear-gradient(to bottom, #ffccd5, #fff0f3, #ffffff);
+			background-attachment: fixed;
+			display: flex;
+			flex-direction: column;
+			align-items: center; 
+			color: #fff0f3;
+			font-family: 'Courier New', Courier, monospace;
+			overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+		}
+
+		.header {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			overflow: hidden;
+		}
+
+		.header img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.menu {
+			background-color: #73172E;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border-bottom: 2px solid #73172E;
+		}
+
+		.head {
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+			height: 100%;         
+			margin: 0;
+			padding: 15px 10px;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-weight: bold;
+			font-size: 18px;
+			text-align: center;
+		}
+
+		.back-link {
+			color: #ffccd5;
+			text-decoration: none;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
+
+		.back-link:hover {
+			color: #ffffff;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			max-width: 1200px;
+			padding: 40px 20px;
+			box-sizing: border-box;
+		}
+
+		.title {
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-size: 32px;
+			font-weight: bold;
+			color: #73172E;
+			margin-bottom: 10px;
+		}
+
+		.subtitle {
+			font-size: 15px;
+			color: #73172E;
+			margin-bottom: 40px;
+			letter-spacing: 1px;
+			font-family: "Bookman", "URW Bookman L", serif;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+			width: 100%;
+			margin: 0 0 30px 0;
+			box-sizing: border-box;
+		}
+
+		.card {
+			background-color: #73172E;
+			border: 2px solid #73172E;
+			border-radius: 14px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			transition: transform 0.3s ease, border-color 0.3s ease;
+			text-decoration: none;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			border-color: #ffccd5;
+		}
+
+		.preview {
+			width: 100%;
+			height: 180px;
+			background-color: #FFE0EC;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 2px solid #73172E;
+			color: #73172E;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		.preview img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.content {
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			box-sizing: border-box;
+		}
+
+		.heading {
+			font-size: 20px;
+			font-weight: bold;
+			color: #ffffff;
+			margin-bottom: 12px;
+			font-family: "Bookman", "URW Bookman L", serif;
+		}
+
+		.description {
+			font-size: 14px;
+			color: #e2cbd2;
+			line-height: 1.6;
+			flex-grow: 1;
+		}
+
+		.footer {
+			font-family: 'Courier New';
+			font-size: 15px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			padding: 25px 15px; 
+			color: #ffccd5;
+			background-color: #73172E;
+			text-align: center;
+			margin-top: 60px;
+			width: 100%;
+			box-sizing: border-box;
+			border-top: 1px solid #73172E;
+		}
+
+		.row {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 20px;
+			flex-wrap: wrap;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.row img {
+			width: 100%;
+			max-width: 220px;
+			height: 300px;
+			border: 2px solid #73172E;
+			border-radius: 10px;
+			object-fit: cover;
+			background-color: mintcream;
+			padding: 5px;
+			box-sizing: border-box;
+			cursor: pointer;
+			transition: transform 0.3s ease, border-color 0.3s ease;
+		}
+
+		.row img:hover {
+			transform: scale(1.03);
+			border-color: #ffccd5;
+		}
+
+		.row video {
+			width: 100%;
+			max-width: 280px;
+			height: 200px;
+			border: 2px solid #73172E;
+			border-radius: 10px;
+			object-fit: cover;
+			background-color: mintcream;
+			padding: 5px;
+			box-sizing: border-box;
+			cursor: pointer;
+			transition: transform 0.3s ease, border-color 0.3s ease;
+		}
+
+		.row video:hover {
+			transform: scale(1.03);
+			border-color: #ffccd5;
+		}
+
+		.art-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			max-width: 220px;
+		}
+
+		.video-item {
+			max-width: 280px;
+		}
+
+		.art-title {
+			margin-top: 10px;
+			margin-bottom: 0;
+			color: #73172E;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-weight: bold;
+			font-size: 15px;
+			text-align: center;
+		}
+
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(26, 8, 16, 0.85);
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.modal-content {
+			max-width: 90%;
+			max-height: 85vh;
+			border-radius: 12px;
+			border: 3px solid #ffccd5;
+			object-fit: contain;
+			background-color: #fff0f3;
+			padding: 5px;
+			display: none;
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 25px;
+			right: 40px;
+			color: #ffccd5;
+			font-size: 45px;
+			font-weight: bold;
+			cursor: pointer;
+			font-family: Arial, sans-serif;
+			transition: color 0.3s ease;
+		}
+
+		.close-btn:hover {
+			color: #ffffff;
+		}
+
+		/* Responsive adjustments for phones and small tablets */
+		@media (max-width: 600px) {
+			.wrapper {
+				padding: 20px 15px;
+			}
+			.title {
+				font-size: 24px;
+			}
+			.subtitle {
+				font-size: 13px;
+				margin-bottom: 25px;
+			}
+			.head {
+				font-size: 14px;
+			}
+			.close-btn {
+				top: 15px;
+				right: 20px;
+				font-size: 35px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="header">
+		<img src="hey.png" alt="banner">
+	</div>
+
+	<div class="menu">
+		<div class="head">
+			<a href="3.html" class="back-link">˗⤷ ゛ Back to Portfolio ˎˊ˗ </a>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div id="title1" class="title">ACTIVITIES</div>
+		<div class="subtitle">A collection of past creative HTML/CSS/JavaScript works and web pages.</div>
+
+		<div class="container">
+			<a href="Student Registration.html" class="card">
+				<div class="preview">
+					<img src="table.png" alt="Activities">
+				</div>
+				<div class="content">
+					<div class="heading">Student Registration</div>
+					<div class="description">A static webpage detailing the records of students visiting the library using HTML, and CSS. </div>
+				</div>
+			</a>
+
+			<a href="table.html" class="card">
+				<div class="preview">
+					<img src="cozy.png" alt="Activities">
+				</div>
+				<div class="content">
+					<div class="heading">Table</div>
+					<div class="description">A static webpage detailing the records of student registration along with a form using HTML, and CSS. </div>
+				</div>
+			</a>
+
+			<a href="huhu.html" class="card">
+				<div class="preview">
+					<img src="for.png" alt="Activities">
+				</div>
+				<div class="content">
+					<div class="heading">Working Form</div>
+					<div class="description">A working student registration form using HTML, CSS, and with integrated JavaScript.</div>
+				</div>
+			</a>
+		</div>
+
+		<br><br><br>
+
+		<div id="title2" class="title">ARTWORKS</div>
+		<div class="subtitle">A collection of traditional and digital artworks using IbisPaint X.</div>
+
+		<div class="row">
+			<div class="art-item">
+				<img src="dra.jfif" alt="art 1" class="artwork-img">
+				<p class="art-title"> A student in SBIS </p>
+			</div>
+
+			<div class="art-item">
+				<img src="ske.jpg" alt="art 2" class="artwork-img">
+				<p class="art-title"> Yearning for Life </p>
+			</div>
+
+			<div class="art-item">
+				<img src="miku.jfif" alt="art 3" class="artwork-img">
+				<p class="art-title"> Hatsune Miku </p>
+			</div>
+
+			<div class="art-item">
+				<img src="co.png" alt="art 4" class="artwork-img">
+				<p class="art-title"> Swaggy Man </p>
+			</div>
+
+			<div class="art-item">
+				<img src="chu.png" alt="art 5" class="artwork-img">
+				<p class="art-title"> Chu ! </p>
+			</div>
+
+			<div class="art-item">
+				<img src="fil.jfif" alt="art 6" class="artwork-img">
+				<p class="art-title"> The Grains of Tomorrow </p>
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<div id="title3" class="title">ANIMATION</div>
+		<div class="subtitle">2D animation made in IbisPaint X and Capcut.</div>
+
+		<div class="row">
+			<div class="art-item video-item">
+				<video class="animation-video" src="gif.mp4" muted></video>
+				<p class="art-title"> Yearning for Death </p>
+			</div>
+		</div>
+	</div>
+
+	<div id="imageModal" class="modal">
+		<span class="close-btn">&times;</span>
+		<img class="modal-content" id="expandedImg">
+		<video class="modal-content" id="expandedVideo" controls></video>
+	</div>
+
+	<div class="footer">
+		© 2026 Dayne Rose B. Tolentino / CS Student. All rights reserved.
+	</div>
+
+	<script>
+		const modal = document.getElementById("imageModal");
+		const modalImg = document.getElementById("expandedImg");
+		const modalVideo = document.getElementById("expandedVideo");
+		const artworkImages = document.querySelectorAll(".artwork-img");
+		const animationVideos = document.querySelectorAll(".animation-video");
+		const closeBtn = document.querySelector(".close-btn");
+
+		artworkImages.forEach(img => {
+			img.addEventListener("click", function() {
+				modal.style.display = "flex";
+				modalImg.style.display = "block";
+				modalVideo.style.display = "none";
+				modalImg.src = this.src;
+			});
+		});
+
+		animationVideos.forEach(vid => {
+			vid.addEventListener("click", function() {
+				modal.style.display = "flex";
+				modalImg.style.display = "none";
+				modalVideo.style.display = "block";
+				modalVideo.src = this.src;
+				modalVideo.play();
+			});
+		});
+
+		closeBtn.addEventListener("click", function() {
+			modal.style.display = "none";
+			modalVideo.pause();
+		});
+
+		modal.addEventListener("click", function(event) {
+			if (event.target === modal) {
+				modal.style.display = "none";
+				modalVideo.pause();
+			}
+		});
+	</script>
+
+</body>
+</html>

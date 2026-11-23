@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>CONTACT</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffccd5, #fff0f3, #ffffff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .header img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .menu {
+            background-color: #FFD6E1;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: solid 1px white;
+        }
+
+        .head {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 40px;                 
+            height: 50px;         
+            margin: 0;
+            padding: 15px 0;
+            font-family: "Bookman", "URW Bookman L", serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #73172E;
+        }
+
+         .head a {
+            color: #73172E;
+            text-decoration: none;
+            padding: 30px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 100%;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .form {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(115, 23, 46, 0.08);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #73172E;
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-family: "Bookman", "URW Bookman L", serif;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #73172E;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ffb6c1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #73172E;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(115, 23, 46, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #73172E;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #521021;
+        }
+
+        #outputResult {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="contact.png" alt="banner">
+    </div>
+
+    <div class="menu">
+        <div class="head">
+            <a href="index.html"> 〢🏠︎ HOME</a>
+            <a href="2.html"> 〢˚˖𓍢ִ໋❀ ABOUT ME</a>
+            <a href="3.html"> 〢⿻ PORTFOLIO</a>
+            <a href="4.html"> 〢『 GALLERY 』</a>
+            <a href="5.html"> 〢˗ˏˋ ꒰ ✉︎ CONTACT</a>     
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="form">
+            <h1>CONTACT FORM</h1>
+
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name"><br><br>
+
+                <label for="ema">Email:</label>
+                <input type="email" id="ema" placeholder="e.g., Juan@gmail.com"><br><br>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="Topic you wish to discuss"><br><br>
+                
+                <label for="mess">Message:</label>
+                <input type="text" id="mess" placeholder="Write your thoughts away !"><br><br>
+
+                <button type="button" id="submitBtn">Submit</button>
+                <p id="outputResult" style="font-weight: bold;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            const nameInput = document.getElementById("name").value.trim();
+            const emaInput = document.getElementById("ema").value.trim();
+            const subInput = document.getElementById("subject").value.trim();
+            const messInput = document.getElementById("mess").value.trim();
+            const outputResult = document.getElementById("outputResult");
+
+            if (nameInput === "" || emaInput === "" || subInput === "" || messInput === "") {
+                outputResult.style.color = "#4D001B";
+                outputResult.innerHTML = "Error: Please fill in all missing fields before submitting.";
+                return;
+            }
+
+            outputResult.style.color = "#D90095";
+            outputResult.innerHTML = "Form submitted successfully!";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PORTFOLIO</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: linear-gradient(to bottom, #ffccd5, #fff0f3, #ffffff);
+			background-attachment: fixed;
+			display: flex;
+			flex-direction: column;
+			align-items: center; 
+			color: #fff0f3;
+			font-family: 'Courier New', Courier, monospace;
+		}
+
+		.header {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			overflow: hidden;
+		}
+
+		.header img {
+			width: 100%;
+			height: 150px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.menu {
+			background-color: #FFD6E1;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border-bottom: 2px solid #73172E;
+			border-top: 1px solid snow;
+		}
+
+		.head {
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 20px 40px;             
+			height: auto;         
+			margin: 0;
+			padding: 15px 10px;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-weight: bold;
+			font-size: 16px;
+			color: #ffccd5;
+		}
+
+		.head a {
+			color: #73172E;
+			text-decoration: none;
+			padding: 5px 10px;
+			transition: color 0.3s ease;
+		}
+
+		.head a:hover {
+			color: #ffffff;
+		}
+
+		.head a.active {
+			color: #73172E;
+			border-bottom: 2px solid #73172E;
+			padding-bottom: 3px;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			max-width: 1200px;
+			padding: 40px 20px;
+			box-sizing: border-box;
+		}
+
+		.title {
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-size: 32px;
+			font-weight: bold;
+			color: #73172E;
+			margin-bottom: 10px;
+		}
+
+		.subtitle {
+			font-size: 15px;
+			color: #73172E;
+			margin-bottom: 40px;
+			letter-spacing: 1px;
+			font-family: "Bookman", "URW Bookman L", serif;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+			width: 100%;
+		}
+
+		.card {
+			background-color: #73172E;
+			border: 2px solid #73172E;
+			border-radius: 14px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			transition: transform 0.3s ease, border-color 0.3s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			border-color: #ffccd5;
+		}
+
+		.preview {
+			width: 100%;
+			height: 220px;
+			background-color: #FFE0EC;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 2px solid #73172E;
+		}
+
+		.preview img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.content {
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		.heading {
+			font-size: 20px;
+			font-weight: bold;
+			color: #ffffff;
+			margin-bottom: 12px;
+			font-family: "Bookman", "URW Bookman L", serif;
+		}
+
+		.description {
+			font-size: 14px;
+			color: #e2cbd2;
+			line-height: 1.6;
+			margin-bottom: 24px;
+			flex-grow: 1;
+		}
+
+		.button {
+			align-self: flex-start;
+			background-color: transparent;
+			color: #ffffff;
+			border: 1px solid #ffccd5;
+			padding: 10px 20px;
+			border-radius: 8px;
+			font-family: 'Courier New', Courier, monospace;
+			font-weight: bold;
+			font-size: 13px;
+			cursor: pointer;
+			letter-spacing: 1px;
+			transition: background-color 0.3s ease, color 0.3s ease;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		.button:hover {
+			background-color: #ffccd5;
+			color: #1a0810;
+		}
+
+		.footer {
+			font-family: 'Courier New';
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			padding: 25px; 
+			color: #ffccd5;
+			background-color: #73172E;
+			text-align: center;
+			margin-top: 60px;
+			width: 100%;
+			box-sizing: border-box;
+			border-top: 1px solid #73172E;
+		}
+
+		/* Media query for smaller mobile phones */
+		@media (max-width: 600px) {
+			.title {
+				font-size: 26px;
+			}
+			.subtitle {
+				font-size: 13px;
+			}
+			.head {
+				font-size: 14px;
+				gap: 10px 20px;
+			}
+			.wrapper {
+				padding: 20px 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="header">
+		<img src="header.png" alt="banner">
+	</div>
+
+	<div class="menu">
+		<div class="head">
+			<a href="index.html"> 〢🏠︎ HOME</a>
+			<a href="2.html"> 〢˚˖𓍢ִ໋❀ ABOUT ME</a>
+			<a href="3.html"> 〢⿻ PORTFOLIO</a>
+			<a href="4.html"> 〢『 GALLERY 』</a>
+			<a href="5.html"> 〢˗ˏˋ ꒰ ✉︎ CONTACT</a>		
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="title">Selected Works</div>
+		<div class="subtitle">A collection of activities, artworks, presentations, and video edits I have created.</div>
+
+		<div class="container">
+			<!-- Card 1: Activities -->
+			<div class="card">
+				<div class="preview">
+					<img src="table.png" alt="Activities">
+				</div>
+				<div class="content">
+					<div class="heading">Websites</div>
+					<div class="description">Past creative HTML/CSS/JavaScript works integrated into.</div>
+					<a href="Activities.html#title1" class="button">View Project</a>
+				</div>
+			</div>
+
+			<!-- Card 2: Artworks -->
+			<div class="card">
+				<div class="preview">
+					<img src="artsy.png" alt="Artworks">
+				</div>
+				<div class="content">
+					<div class="heading">Artworks</div>
+					<div class="description">Original digital drawings, illustrations, and creative pieces crafted with passion and detail.</div>
+					<a href="Activities.html#title2" class="button">View Project</a>
+				</div>
+			</div>
+
+			<!-- Card 4: Video Edits / Animations -->
+			<div class="card">
+				<div class="preview">
+					<img src="vid.png" alt="Video Edits">
+				</div>
+				<div class="content">
+					<div class="heading">Animation</div>
+					<div class="description">Dynamic motion graphics, video montages, and creative visual editing projects.</div>
+					<a href="Activities.html#title3" class="button">View Project</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		© 2026 Dayne Rose B. Tolentino / CS Student. All rights reserved.
+	</div>
+
+</body>
+</html>

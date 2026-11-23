@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HOME </title>
+</head>
+
+<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(to bottom, #ffccd5, #fff0f3, #ffffff);
+			background-attachment: fixed;
+			font-family: "Arial Narrow", sans-serif;
+		}
+
+		.header {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			overflow: hidden;
+		}
+
+		.header img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+
+		.menu {
+			background-color: #FFD6E1;
+			width: 100%;
+		}
+
+		.head {
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+			gap: 40px;             
+			flex-wrap: wrap;       
+			padding: 15px 10px;
+			border: 1px solid snow;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-weight: bold;
+			font-size: 18px;
+			color: #73172E;
+		}
+
+		.head a {
+			color: #73172E;
+			text-decoration: none;
+			padding: 10px 15px;
+			transition: opacity 0.2s;
+		}
+
+		.head a:hover {
+			opacity: 0.7;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: row;     
+			justify-content: center;
+			align-items: center;
+			gap: 5%;
+			padding: 20px;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		.profile img {
+			width: 220px; 
+			height: 220px;
+			object-fit: cover;
+			border-radius: 50%;
+			border: 4px solid snow;
+			box-shadow: 0px 5px 10px 5px #A66572;
+		}
+
+		.box1 {
+			display: flex;
+			flex-direction: column; 
+			justify-content: center;
+			text-align: left;
+			border-radius: 50px;
+			max-width: 600px;
+		}
+
+		#greet {
+			padding: 10px 0;
+			text-align: center;
+			color: #73172E;
+			font-family: "Bookman", "URW Bookman L", serif;
+			font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+		}
+
+		#intro {
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			padding: 10px;
+			letter-spacing: 1px;
+			word-spacing: 2px;
+			font-weight: 300;
+			color: #400E1A;
+			margin: 0;
+		}
+
+		.boxes {
+			display: flex;
+			flex-direction: row; 
+			justify-content: center;
+			align-items: stretch;
+			gap: 23px; 
+			margin: 50px auto;
+			max-width: 1200px;
+			padding: 0 20px;
+			flex-wrap: wrap; 
+		}
+
+		.box2, .box3, .box4, .box5 {
+			display: flex;
+			flex-direction: column;
+			text-decoration: none; 
+			color: inherit;        
+			width: 250px;
+			background-color: #FFE0EC;
+			border-radius: 30px;
+			overflow: hidden;
+			box-shadow: 0px 15px 20px 5px #A66572;
+			margin-bottom: 30px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.box2 p, .box3 p, .box4 p, .box5 p {
+			padding: 0px 20px;
+			margin: 20px 0;
+			letter-spacing: 1px;
+			word-spacing: 2px;
+			font-weight: 300;
+			color: #400E1A;
+			flex-grow: 1;
+		}
+
+		.box2:hover, .box3:hover, .box4:hover, .box5:hover {
+			transform: translateY(-8px); 
+			box-shadow: 0px 10px 20px #f5569b; 
+		}
+
+		.box2 h4, .box3 h4, .box4 h4, .box5 h4 {
+			width: 100%;
+			color: white;
+			background-color: #73172E;
+			text-align: center;
+			padding: 15px 0px;
+			margin: 0 0 15px 0;
+			transition: background-color 0.3s ease, color 0.3s ease; 
+		}
+
+		.box2:hover h4, .box3:hover h4, .box4:hover h4, .box5:hover h4 {
+			background-color: #f04f82; 
+			color: #faf0f2;
+		}
+
+		@media screen and (max-width: 768px) {
+			.container {
+				flex-direction: column;
+				text-align: center;
+				gap: 20px;
+			}
+
+			.box1 {
+				align-items: center;
+			}
+
+			.head {
+				gap: 15px;
+				font-size: 16px;
+			}
+
+			.head a {
+				padding: 8px 10px;
+			}
+
+			.boxes {
+				margin-top: 30px;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.header {
+				height: 100px;
+			}
+			
+			.header img {
+				height: 100px;
+			}
+
+			.head {
+				gap: 8px;
+				font-size: 14px;
+			}
+
+			.profile img {
+				width: 180px;
+				height: 180px;
+			}
+
+			#intro {
+				font-size: 16px;
+			}
+
+			.box2, .box3, .box4, .box5 {
+				width: 100%;
+				max-width: 300px;
+			}
+		}
+</style>
+
+<body>
+
+	<div class="header">
+		<img src="hey.png" alt="banner">
+	</div>
+
+	<div class="menu">
+		<div class="head">
+			<a href="index.html"> 〢🏠︎ HOME</a>
+			<a href="2.html"> 〢˚˖𓍢ִ໋❀ ABOUT ME</a>
+			<a href="3.html"> 〢⿻ PORTFOLIO</a>
+			<a href="4.html"> 〢『 GALLERY 』</a>
+			<a href="5.html"> 〢˗ˏˋ ꒰ ✉︎ CONTACT</a>		
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="profile">
+			<img src="meme.png" alt="profile picture">
+		</div>
+
+		<div class="box1">
+			<h2 id="greet">˚.⋆꒰১  WELCOME TO MY HUMBLE ABODE ❣︎︎  ໒꒱⋆.˚</h2>
+			<p id="intro"> This is Dayne Rose B. Tolentino at your service! I am a second year Computer Science student filled with passion for the arts and the art of creation. Join me and step into a world of fantasy turned reality! Let us share each other's love for the arts as we collaborate on bringing ideas to life! </p>
+		</div>
+	</div>
+
+	<div class="boxes">
+		<a href="2.html" class="box2">
+			<h4> ABOUT ME </h4>
+			<p> Come and take a look at the personality behind the chirpy creator !</p>	
+		</a>
+
+		<a href="3.html" class="box3">
+			<h4> PORTFOLIO </h4>
+			<p> My journey was never easy, but every difficulty is worthwhile. Come and see my progress !</p>	
+		</a>
+
+		<a href="4.html" class="box4">
+			<h4> GALLERY </h4>
+			<p> My bubble does not simply float in school, I can offer so much more than my intellectual suffering. </p>	
+		</a>
+
+		<a href="5.html" class="box5">
+			<h4> CONTACT </h4>
+			<p> Still curious about me? Let us get to know each other more !</p>	
+		</a>
+	</div>
+
+</body>
+</html>

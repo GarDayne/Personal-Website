@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCC Student Registration System</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: #f5eae4;	
+			font-family: Arial, sans-serif;
+		}
+
+		.heading {
+			background-color: #301708;
+			color: white;
+			text-align: center;
+			padding: 36px;
+		}
+
+		.head {
+			font-family: sans-serif;
+			font-size: 35px;
+			font-weight: 900;
+			letter-spacing: 15px;
+			word-spacing: 4px;
+		}
+
+		.ulo {
+			font-family: 'Courier New';
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: 5px;
+			border: 2px solid white;
+			padding: 10px 30px;
+			border-radius: 10px;
+			line-height: 50px;
+		}
+
+		.main-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 30px;
+			padding: 40px;
+		}
+
+		.form {
+			flex: 1;
+			width: 500px;
+			background-color: snow;
+			border-radius: 20px;
+			box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+			padding: 30px;
+		}
+
+		.form h2 {
+			font-family: 'Courier New';
+			color: #301708;
+			margin-top: 0;
+			font-size: 28px;
+		}
+
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		.form-group label {
+			font-weight: bold;
+			margin: 0px 0px 5px 0px;
+			font-size: 14px;
+			color: #301708;
+		}
+
+		.form-group input, 
+		.form-group select {
+			width: 95%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 6px;
+			font-size: 14px;
+			background-color: white;
+		}
+
+		.Sheet {
+			flex: 2;
+			background-color: snow;
+			border-radius: 20px;
+			box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+			padding: 30px;
+		}
+
+		.bg {
+			width: 100%;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th {
+			background-color: #301708;
+			color: white;
+			font-family: sans-serif;
+			letter-spacing: 2px;
+			font-size: 15px;
+			padding: 14px;
+			text-align: center;
+			border: 1px solid whitesmoke;
+		}
+
+		td {
+			font-family: 'Arial';
+			font-size: 14px;
+			padding: 20px;
+			text-align: center;
+			border: 1px solid lightgray;
+		}
+
+		caption.first {
+			font-size: 28px;
+			margin: 0px 0px 15px 0px;
+			text-align: left;
+			font-family: 'Courier New';
+			font-weight: bolder;
+			color: #301708;
+		}
+
+		.footer {
+			font-family: 'Courier New';
+			font-size: 20px;
+			font-weight: bold;
+			letter-spacing: 5px;
+			padding: 10px 30px;
+			line-height: 50px;
+			color: white;
+			background-color: #301708;
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		tr.huhu {
+			background-color: #f5eae4;
+		}
+
+		tr.haha {
+			background-color: #D9BCAD;
+		}
+
+		.Sex{
+			font-size: 14px;
+			color: #301708;
+			font-weight: bold;
+		}
+
+		.correct{
+			background-color: #CC9B87;
+			margin: 0px 50px 50px 50px;
+			border-radius: 25px;
+			padding: 10px;
+			border-left: 10px solid #301708;
+		}
+
+		p.one{
+			margin: 15px 50px;
+			color: #301708;
+			font-weight: bold;
+			font-size: 25px;
+			font-family: 'Courier New';
+		}
+
+		p.second{
+			margin: 15px 50px;
+			color: #301708;
+			font-size: 18px;
+			font-family: 'Arial';
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="heading">
+		<div class="head">Cozy Brew Buddies</div>
+		<span class="ulo">"A coffee a day, keeps the bad grades away"</span>
+	</div>
+
+	<!-- General table and form container -->
+	<div class="main-container">
+
+		<!-- Student Reg Sheet -->
+		<div class="form">
+			<h2>Student Registration</h2>
+			<form>
+				<div class="form-group">
+					<label>Student No.</label>
+					<input type="text" placeholder="2026-0001/2800000">
+				</div>
+				<div class="form-group">
+					<label>Name</label>
+					<input type="text" placeholder="Full Name">
+				</div>
+				
+				<!-- Select box control for Course -->
+				<div class="form-group">
+					<label for="department-select">Department</label>
+					<select id="department-select" name="department">
+						<option value="" disabled selected>Select a Department</option>
+						<option value="DCI">DCI</option>
+						<option value="DBA">DBA</option>
+						<option value="DTE">DTE</option>
+						<option value="DAS">DAS</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="course-select">Course</label>
+					<select id="course-select" name="course">
+						<option value="" disabled selected>Select a Course</option>
+						<option value="CS">BS Computer Science</option>
+						<option value="IT ">BS Information Technology</option>
+						<option value="ACC">BS Accountancy</option>
+						<option value="AIS">BS Accounting Information System</option>
+						<option value="PSY">BS Psychology</option>
+						<option value="EDFIL">BS Education Major in Filipino</option>
+						<option value="EDENG">BS Education Major in English</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>Email</label>
+					<input type="email" placeholder="student@email.com">
+				</div>
+
+				<div class="Sex">
+					<label>Gender:</label>
+					<input type="radio" id="male" name="gender" value="Male">
+					<label for="male">Male</label>
+					<input type="radio" id="female" name="gender" value="Female">
+					<label for="female">Female</label>
+				</div>
+
+				<br>
+
+				<div class="form-group">
+					<label for="message">Message:</label>
+					<br>
+					<textarea id="message" name="message" placeholder="Enter your message..."></textarea>
+				</div>
+
+			<!-- Buttons -->
+			<div class="buttons">
+				<input type="submit" value="SUBMIT">
+				<input type="reset" value="CLEAR">		
+			</div>
+			</form>
+		</div>
+
+		<!-- Table Sheet -->
+		<div class="Sheet">
+			<div class="bg">
+				<table>
+					<caption class="first"> Registered Student Members </caption>
+					<thead>
+						<tr>
+							<th>STUDENT NO.</th>
+							<th>NAME </th>
+							<th>DEPARTMENT</th>
+							<th>COURSE </th>
+							<th>EMAIL </th>
+							<th>GENDER</th>
+							<th>STATUS</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr class="haha">
+							<td>2024-12345</td>
+							<td><strong>Dayne Rose B. Tolentino</strong></td>
+							<td>DCI</td>
+							<td>BS Computer Science</td>
+							<td>dbtolentino@ccc.edu.ph</td>
+							<td>FEMALE</td>
+							<td>Active</td>
+						</tr>
+
+						<tr class="huhu">
+							<td>2024-54321</td>
+							<td><strong>Kyle Ivan G. Tolentino</strong></td>
+							<td>DCI</td>
+							<td>BS Information Technology</td>
+							<td>kitolentino@ccc.edu.ph</td>
+							<td>MALE</td>
+							<td>Active</td>
+						</tr>
+
+						<tr class="haha">
+							<td>2800595</td>
+							<td><strong>Precious P. Batumbakal</strong></td>
+							<td>DBA</td>
+							<td>BS Accounting Information System</td>
+							<td>pbatumbakal@ccc.edu.ph</td>
+							<td>FEMALE</td>
+							<td>Pending</td>
+						</tr>
+
+						<tr class="huhu">
+							<td>2800598</td>
+							<td><strong>Gavin D. de Guzman</strong></td>
+							<td>DBA</td>
+							<td>BS Accountancy</td>
+							<td>gdguzman@ccc.edu.ph</td>
+							<td>MALE</td>
+							<td>Active</td>
+						</tr>
+
+						<tr class="haha">
+							<td>2024-24681</td>
+							<td><strong>Norjannah A. Pilapil</strong></td>
+							<td>DTE</td>
+							<td>BS Education Major in Filipino</td>
+							<td>npilapil@ccc.edu.ph</td>
+							<td>FEMALE</td>
+							<td>Active</td>
+
+						<tr class="huhu">
+							<td>2800600</td>
+							<td><strong>Mica Mae Española</strong></td>
+							<td>DAS</td>
+							<td>BS Psychology</td>
+							<td>miespanola@ccc.edu.ph</td>
+							<td>FEMALE</td>
+							<td>Active</td>
+						</tr>
+
+						<tr class="haha">
+							<td>2800612</td>
+							<td><strong>Calix Valenzuela</strong></td>
+							<td>DAS</td>
+							<td>BS Psychology</td>
+							<td>calvalenzuela@ccc.edu.ph</td>
+							<td>FEMALE</td>
+							<td>Active</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+	</div>
+
+		<div class="correct">
+		<p class="one"> REGISTRATION INFORMATION </p>
+		<p class="second"> Please complete all required fields before submitting. Make sure all information is correct.</p>
+	</div>
+
+	<div class="footer">
+		Dayne Rose B. Tolentino/CS Student
+	</div>
+</body>
+</html>
